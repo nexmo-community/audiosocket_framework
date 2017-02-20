@@ -1,0 +1,21 @@
+[
+    {
+    	"action": "talk",
+    	"text": "Hello."
+    },
+    {
+       "action": "connect",
+       "eventUrl": ["{{event_url}}"],
+       "from":"{{lvn}}",
+       "endpoint": [
+           {
+              "type": "websocket",
+              "uri": "ws://{{host}}/socket",
+              "content-type": "audio/l16;rate=16000", 
+              "headers": {
+                 "cli": "{{cli}}"
+              }
+           }
+       ]
+     }
+]

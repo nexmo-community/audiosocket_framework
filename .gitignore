@@ -1,0 +1,5 @@
+.DS_Store
+.cache/
+recordings/*.wav
+app.conf
+venv/*
