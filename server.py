@@ -78,7 +78,7 @@ class BufferedPipe(object):
         self.payload = b''
 
 
-class RecordingProcessor(object):
+class Processor(object):
     def __init__(self, path):
         self.path = path
     def process(self, count, payload, cli):
@@ -155,7 +155,7 @@ class NCCOHandler(tornado.web.RequestHandler):
     def get(self):
         cli = self.get_argument("from", None).lstrip("+")
         to = self.get_argument("to", None)
-        conv_uuid = self.get_argument("06201119-88e9-4d6c-b2f0-45384813deb5", None)
+        conv_uuid = self.get_argument("conversation_uuid", None)
         self.set_header("Content-Type", 'application/json')
         self.write(self._template.generate(
             host=self._host,
