@@ -216,7 +216,7 @@ def main(argv=sys.argv[1:]):
         config = Config(args.config)
         
         #Pass any config for the processor into this argument.
-        processor = RecordingProcessor(config.path).process
+        processor = Processor(config.path).process
 
         application = tornado.web.Application([
             url(r"/ncco", NCCOHandler, dict(host=config.host, event_url=config.event_url)),
