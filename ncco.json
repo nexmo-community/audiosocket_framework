@@ -1,19 +1,13 @@
-[
-    {
-    	"action": "talk",
-    	"text": "Hello."
-    },
-    {
+[{
        "action": "connect",
-       "eventUrl": ["{{event_url}}"],
-       "from":"{{lvn}}",
+       "eventUrl": ["http://$hostname/event"],
+       "from":"123456",
        "endpoint": [
            {
               "type": "websocket",
-              "uri": "ws://{{host}}/socket",
+              "uri" : "ws://$hostname/socket",
               "content-type": "audio/l16;rate=16000", 
-              "headers": {
-                 "cli": "{{cli}}"
+              "headers": { "callerid" : "$callerid"
               }
            }
        ]
