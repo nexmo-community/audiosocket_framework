@@ -1,4 +1,7 @@
 # AudioSocket Framework
+
+## ❗❗❗ **This repo is now deprecated. Check the [Vonage Developer Blog](https://developer.vonage.com/en/blog) for more blog posts and tutorials. For more sample Vonage projects, check the [Vonage Community GitHub repo](https://github.com/Vonage-Community).**
+
 This is a Basic python tornado app for handling websocket audio from the Nexmo Voice API.
 
 This is an ideal starting point for interfacing between Nexmo and an AI Bot platform.
